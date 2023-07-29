@@ -1,5 +1,5 @@
 import { elements } from "./base";
-const renderNairlaga = (orts) => `
+const renderNairlaga = orts => `
     <li class="recipe__item">
         <svg class="recipe__icon">
             <use href="img/icons.svg#icon-check"></use>
@@ -11,9 +11,9 @@ const renderNairlaga = (orts) => `
     </li>
 `;
 
-export const highlightSelectedRecipe = (id) => {
+export const highlightSelectedRecipe = id => {
   const arr = Array.from(document.querySelectorAll(".results__link"));
-  arr.forEach((el) => el.classList.remove("results__link--active"));
+  arr.forEach(el => el.classList.remove("results__link--active"));
 
   const domObj = document.querySelector(`.results__link[href*="${id}"]`);
 
@@ -84,7 +84,7 @@ export const renderRecipe = (recipe, isLiked) => {
         <ul class="recipe__ingredient-list">
           
             ${recipe.ingredients
-              .map((el) => renderNairlaga(el))
+              .map(el => renderNairlaga(el))
               .join(" ")}          
 
         </ul>

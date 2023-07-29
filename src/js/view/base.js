@@ -7,11 +7,11 @@ export const elements = {
   recipeDiv: document.querySelector(".recipe"),
   shoppingList: document.querySelector(".shopping__list"),
   likesMenu: document.querySelector(".likes__field"),
-  likesList: document.querySelector(".likes__list"),
+  likesList: document.querySelector(".likes__list")
 };
 
 export const elementStrings = {
-  loader: "loader",
+  loader: "loader"
 };
 
 export const clearLoader = () => {
@@ -20,7 +20,7 @@ export const clearLoader = () => {
   if (loader) loader.parentElement.removeChild(loader);
 };
 
-export const renderLoader = (parent) => {
+export const renderLoader = parent => {
   const loader = `
         <div class="${elementStrings.loader}">
             <svg>
