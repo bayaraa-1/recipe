@@ -1,6 +1,6 @@
 import { elements } from "./base";
 
-export const renderItem = item => {
+export const renderItem = (item) => {
   const html = `
     <li class="shopping__item" data-itemid=${item.id}>
         <p class="shopping__description">${item.item}</p>
@@ -19,7 +19,7 @@ export const clearItems = () => {
   elements.shoppingList.innerHTML = "";
 };
 
-export const deleteItem = id => {
+export const deleteItem = (id) => {
   const item = document.querySelector(`[data-itemid="${id}"]`);
   item.parentElement.removeChild(item);
 };

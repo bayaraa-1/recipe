@@ -17,7 +17,7 @@ export default class Likes {
 
   deleteLike(id) {
     // id гэдэг ID-тэй like-ийг индексийг массиваас хайж олно.
-    const index = this.likes.findIndex(el => el.id === id);
+    const index = this.likes.findIndex((el) => el.id === id);
 
     // Уг индекс дээрх элементийг массиваас устгана
     this.likes.splice(index, 1);
@@ -29,7 +29,7 @@ export default class Likes {
   isLiked(id) {
     //   if( this.likes.findIndex(el => el.id === id) === -1) return false;
     //   else return true;
-    return this.likes.findIndex(el => el.id === id) !== -1;
+    return this.likes.findIndex((el) => el.id === id) !== -1;
   }
 
   getNumberOfLikes() {

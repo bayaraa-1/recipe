@@ -7,7 +7,7 @@ export default class List {
 
   deleteItem(id) {
     // id гэдэг ID-тэй орцын индексийг массиваас хайж олно.
-    const index = this.items.findIndex(el => el.id === id);
+    const index = this.items.findIndex((el) => el.id === id);
 
     // Уг индекс дээрх элементийг массиваас устгана
     this.items.splice(index, 1);
@@ -16,7 +16,7 @@ export default class List {
   addItem(item) {
     let newItem = {
       id: uniqid(),
-      item
+      item,
     };
 
     this.items.push(newItem);

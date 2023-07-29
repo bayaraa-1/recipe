@@ -1,6 +1,6 @@
 import { elements } from "./base";
 
-const renderRecipe = recipe => {
+const renderRecipe = (recipe) => {
   const markup = `
     <li>
         <a class="results__link" href="#${recipe.recipe_id}">
