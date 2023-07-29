@@ -7,12 +7,12 @@ module.exports = {
   output: {
     filename: "js/main.js",
     path: path.resolve(__dirname, "docs"),
+    // clean: true,
   },
-
+  devtool: "inline-source-map",
   devServer: {
     static: "./docs",
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
